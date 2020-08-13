@@ -1,0 +1,42 @@
+header img {
+    max-width: 100%;
+}
+
+video {
+    width: 100%;
+    margin: 50px;
+}
+
+.page-header {
+    text-align: center;
+
+}
+
+
+.home-content {
+    text-align: center;
+    margin: 10%;
+}
+
+/* .home-content a {
+    font-size: 50px;
+} */
+
+.button {
+    display: inline-block;
+    max-width: 300px;
+    border: 5px solid #602A02;
+    font-size: 30px;
+    color: #602A02;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: .4s;
+}
+
+.button:hover {
+    background-color: #602A02;
+    border-color: red;
+    color: #FDF8C1;
+}
