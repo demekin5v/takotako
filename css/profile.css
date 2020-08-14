@@ -1,7 +1,21 @@
+header img {
+    max-width: 100%;
+}
+
 .page-header {
     text-align: center;
 }
 
-p {
+body {
     text-align: center;
+}
+
+p1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+input {
+    height: 20px;
 }
