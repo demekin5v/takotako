@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>たこ焼き名刺</title>
+    <link rel="stylesheet" href="/static/css/complete.css?1224">
+</head>
+
+<body>
+    <div class="page-header">
+        <div id="top">
+            <img class="logo" src="/static/img/takoyakilogo.jpg">
+        </div>
+
+    </div>
+    <div class="back">
+        <div class="regist">
+            <form action="/complete" method="POST">
+                <div class="item">登録完了(￣▽￣)</div>
+                <div class="item">早速作成しましょう！！</div>
+                <div class="item"><a href="/takoyaki">メイン画面へ</a></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

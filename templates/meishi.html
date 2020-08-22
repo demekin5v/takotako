@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名刺完成</title>
+    <link rel="stylesheet" href="/static/css/meishi.css?1611091">
+</head>
+
+<header class="page-header">
+    <div id="top">
+        <a href="takoyaki.html"><img class="logo" src="/static/img/takoyakilogo.jpg"></a>
+    </div>
+</header>
+
+<body>
+    <!-- <hr>
+    <div style="background-color : #AAEEDD">
+        <h1>JavaScriptで撮るスクリーンショット</h1> -->
+    <!-- </div> -->
+    <div class="content">
+        <h1>あなたのたこやき名刺が完成したよ！</h1>
+        <div id="main">
+            <form action="/meishi">
+
+                <div class="regist">
+                    <img class="item" id="icon" src="/static/img/{{img_file}}" value="{{img_file}}" name="img_file">
+
+
+                    <div class="item">お名前</div>
+                    <input class="item left moji" type="name" value="{{username}}" name="item_id" size="30">
+                    <div class="item left botm">たこ焼き名</div>
+                    <input class="item left moji" type="name" value="{{resipi}}" name="item_id" size="30">
+                    <a href="" id="ss" download="html_ss.png">作成した名刺を保存</a>
+
+                </div>
+
+            </form>
+        </div>
+        <!-- <br>
+        <hr>
+        <h3>↓↓ここから画像↓↓　（上の対象のDIVを画像化）<h3>
+            <img src="" id="result" />
+            <h3>↑↑ここまで画像↑↑</h3>
+            <hr> -->
+        <hr>
+        <hr>
+        <hr>
+        <a href="" id="ss" download="html_ss.png"></a>
+    </div>
+    <!-- <hr> -->
+    <!-- <h3>注意</h3>
+            <ul>
+                <li>実際にはスクリーンショットを撮っているわけではない</li>
+                <li>html2canvasは、HTML内のDOMやCSSを解釈してCanvas上に描画するライブラリ</li>
+                <li>つまり、レンダリングエンジンに近い動作をする</li>
+                <li>そのため、ブラウザと異なる表示がされる場合がある</li>
+                <li>flashやapplet,iframe（別URL）はうまくキャプチャできない</li>
+            </ul> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script>
+        //ロードされた際の処理として実施：
+        window.onload = function () {
+
+            // //HTML内に画像を表示
+            // html2canvas(document.getElementById("target"), {
+            //     onrendered: function (canvas) {
+            //         //imgタグのsrcの中に、html2canvasがレンダリングした画像を指定する。
+            //         var imgData = canvas.toDataURL();
+            //         document.getElementById("result").src = imgData;
+            //     }
+            // });
+
+            //ボタンを押下した際にダウンロードする画像を作る
+            html2canvas(document.body, {
+                onrendered: function (canvas) {
+                    //aタグのhrefにキャプチャ画像のURLを設定
+                    var imgData = canvas.toDataURL();
+                    document.getElementById("ss").href = imgData;
+                }
+            });
+
+        }
+    </script>
+    <div>
+        <h2>レシピ詳細</h2>
+        <div id="toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li>具材</li><input class="me" type="name" value="{{gu}}" name="item_id" size="20">
+                <li>トッピング</li><input class="me" type="name" value="{{topping}}" name="item_id" size="20">
+                <li>ソース</li><input class="me" type="name" value="{{source}}" name="item_id" size="20">
+            </ul>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/meishi.js"></script>
+    </div>
+</body>
+{% endblock %}

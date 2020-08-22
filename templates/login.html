@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>たこ焼き名刺</title>
+    <link rel="stylesheet" href="/static/css/login.css?509212">
+</head>
+
+<body>
+    <div class="page-header">
+        <img class="logo" src="/static/img/takoyakilogo.jpg">
+    </div>
+    <div class="login">
+        <h1>ログインして下さい</h1>
+        <form action="/login" method="POST">
+            <p>ユーザー名<input type="text" name="member_name"></p>
+            <p>パスワード<input type="password" name="member_password"></p>
+            <p><input type="submit" name="save" value="ログイン"></p>
+        </form>
+    </div>
+</body>
+{% endblock %}

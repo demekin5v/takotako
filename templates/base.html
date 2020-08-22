@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="サイトをキーワードで説明">
+    <meta name="description" content="どんなサイトかを短い文章で説明">
+    <meta name=“viewport“ content=“width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0“>
+    <link rel="icon" href="/static/favicon.ico">
+    <title>たこ焼き名刺</title>
+
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.fadethis.min.js"></script>
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <!-- jquery & iScroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/common.js"></script>
+
+</head>
+
+<body class="drawer drawer--right">
+
+    <header>
+        <!-- <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">toggle navigation</span>
+            <span class="drawer-hamburger-icon"></span> -->
+        <!-- </button> -->
+
+        <nav class="drawer-nav" role="navigation">
+
+            <ul class="drawe-menu">
+                <li><a class="drawer-menu-item" href="/#sec4" id="menu-sec4">TOPページ</a></li>
+                <li><a class="drawer-menu-item" href="#" id="lng-ja">日本語</a></li>
+                <li><a class="drawer-menu-item" href="#" id="lng-en">English</a></li>
+                <li><a class="drawer-menu-item" href="/register">ご登録はこちら</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- <footer>
+        <p class="copyright">Copyright &copy; TAKOYAKI all rights reserved.</p>
+    </footer> -->
+
+</body>
+
+</html>

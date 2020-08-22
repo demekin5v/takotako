@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフィール画面</title>
+    <link rel="stylesheet" href="/static/css/profile.css?445622">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1><a href="./takoyaki.html"><img class="logo" src="/static/img/takoyakilogo.jpg"></a></h1>
+        <div id="regist">
+            <form action="/profile" method="post" enctype="multipart/form-data">
+                <!-- <select name="sel1" multiple> -->
+                <p class="item">ユーザ名</p><input type="text" name="username"><br>
+                <p class="item">具材</p><input type="text" name="gu"><br>
+                <!-- <option>タコ</option>
+        <option>イカ</option>
+        <option>ナマコ</option> -->
+                <p class="item">トッピング</p><input type="name" name="topping"><br>
+                <p class="item">ソース</p><input type="name" name="source"><br>
+                <p class="item">たこ焼き名</p><input type="name" name="resipi"><br>
+                <!-- レシピ名：<input type="name" name="name"><br> -->
+                <p class="item">プロフィール画像</p><input type="file" name="img_file"><br>
+                <!-- </select> -->
+                <br>
+                <br>
+                <br>
+                <input class="button" type="submit" name="save" value="作成だぜえ">
+            </form>
+        </div>
+    </header>
+</body>
+
+{% endblock %}
